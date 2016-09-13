@@ -7,19 +7,4 @@ from rest_framework_swagger.renderers import OpenAPIRenderer, SwaggerUIRenderer
 from core.views import StudentViewSet, UniversityViewSet
 
 
-@api_view()
-@renderer_classes([OpenAPIRenderer, SwaggerUIRenderer])
-def schema_view(request):
-    generator = schemas.SchemaGenerator(title='Student Directory API')
-    return response.Response(generator.get_schema(request=request))
 
-
-router = routers.DefaultRouter()
-router.register(r'students', StudentViewSet)
-router.register(r'universities', UniversityViewSet)
-
-urlpatterns = [
-    url(r'^docs/', schema_view),
-    url(r'api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-]
-urlpatterns += router.urls
