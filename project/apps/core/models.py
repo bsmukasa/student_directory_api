@@ -12,6 +12,9 @@ class University(models.Model):
     def __unicode__(self):
         return self.name
 
+    def __str__(self):
+        return self.name
+
 
 class Student(models.Model):
     first_name = models.CharField(max_length=50)
@@ -23,4 +26,7 @@ class Student(models.Model):
         verbose_name_plural = "Students"
 
     def __unicode__(self):
+        return '%s %s' % (self.first_name, self.last_name)
+
+    def __str__(self):
         return '%s %s' % (self.first_name, self.last_name)
