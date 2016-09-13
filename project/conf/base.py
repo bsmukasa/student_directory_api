@@ -197,7 +197,7 @@ LOGGING = {
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 SWAGGER_SETTINGS = {
-    'USE_SESSION_AUTH': True,
+    # 'USE_SESSION_AUTH': True,
     'DOC_EXPANSION': 'list',
     'APIS_SORTER': 'alpha'
 }
