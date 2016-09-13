@@ -3,6 +3,7 @@ from django.db import models
 
 class University(models.Model):
     name = models.CharField(max_length=50)
+    state = models.CharField(max_length=2)
 
     class Meta:
         verbose_name = "University"
