@@ -19,7 +19,7 @@ class University(models.Model):
 class Student(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    university = models.ForeignKey(University)
+    university = models.ForeignKey(University, related_name='students')
 
     class Meta:
         verbose_name = "Student"
