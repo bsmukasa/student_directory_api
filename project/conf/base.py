@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'rest_framework',
+    'rest_framework_swagger',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -191,4 +192,12 @@ LOGGING = {
             'propagate': True,
         },
     }
+}
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': True,
+    'DOC_EXPANSION': 'list',
+    'APIS_SORTER': 'alpha'
 }
