@@ -20,6 +20,6 @@ router.register(r'universities', UniversityViewSet)
 
 urlpatterns = [
     url(r'^docs/', schema_view),
+    url(r'^', include(router.urls)),
     url(r'api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
-urlpatterns += router.urls
