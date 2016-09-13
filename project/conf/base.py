@@ -141,6 +141,10 @@ MEDIA_ROOT = os.path.normpath(os.path.join(ROOT_DIR, 'media'))
 MEDIA_URL = '/media/'
 # END MEDIA CONFIGURATION
 
+ERROR_LOG_FILE = (
+    os.path.join(ROOT_DIR, 'log/error.log')
+)
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -171,7 +175,7 @@ LOGGING = {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
             'filters': ['require_debug_false'],
-            'filename': 'log/error.log',
+            'filename': ERROR_LOG_FILE,
             'formatter': 'verbose'
         },
     },
