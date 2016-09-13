@@ -54,6 +54,7 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
+/project/db
 
 # Flask stuff:
 instance/
@@ -187,3 +188,4 @@ Session.vim
 tags
 ### Vagrant template
 .vagrant/
+/pr
