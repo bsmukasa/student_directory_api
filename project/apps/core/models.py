@@ -1,3 +1,5 @@
+from __future__ import absolute_import, division, print_function, unicode_literals
+
 from django.db import models
 
 
@@ -10,10 +12,7 @@ class University(models.Model):
         verbose_name_plural = "Universities"
 
     def __unicode__(self):
-        return self.name
-
-    def __str__(self):
-        return self.name
+        return u'%s of %s' (self.name, self.state)
 
 
 class Student(models.Model):
@@ -26,7 +25,4 @@ class Student(models.Model):
         verbose_name_plural = "Students"
 
     def __unicode__(self):
-        return '%s %s' % (self.first_name, self.last_name)
-
-    def __str__(self):
-        return '%s %s' % (self.first_name, self.last_name)
+        return u"%s %s" % (self.first_name, self.last_name)
