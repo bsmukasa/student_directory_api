@@ -30,10 +30,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
     'haystack',
     'rest_framework',
     'rest_framework_swagger',
+    'core',
 ]
 
 MIDDLEWARE_CLASSES = [
