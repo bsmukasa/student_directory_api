@@ -1,2 +1,6 @@
 {{ object.name }}
 {{ object.state }}
+
+{% for student in object.students.all %}
+    {{ student.full_name }}
+{% endfor %}
