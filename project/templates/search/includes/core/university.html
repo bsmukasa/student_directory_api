@@ -1,0 +1,8 @@
+<div class="university_result">
+    <h3><a href="{{ result.object.get_absolute_url }}">{{ result.object.name }}</a></h3>
+    <p>State: {{ result.object.state }}</p>
+    <h4>Students</h4>
+    {% for student in result.object.students.all %}
+        <p>{{ student.full_name }}</p>
+    {% endfor %}
+</div>

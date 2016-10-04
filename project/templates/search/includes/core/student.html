@@ -1,0 +1,6 @@
+<div class="student_result">
+    <h3><a href="{{ result.object.get_absolute_url }}">{{ result.object.full_name }}</a></h3>
+    <p>First Name: {{ result.object.first_name }}</p>
+    <p>Last Name: {{ result.object.last_name }}</p>
+    <p>University: {{ result.object.university.name }}, {{ result.object.university.state }}</p>
+</div>
