@@ -29,4 +29,4 @@ class UniversityIndex(indexes.SearchIndex, indexes.Indexable):
         return self.get_model().objects.all()
 
     def prepare_students(self, obj):
-        return [student.last_name for student in obj.students.all()]
+        return [student.full_name() for student in obj.students.all()]
