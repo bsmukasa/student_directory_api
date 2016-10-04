@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'haystack',
     'rest_framework',
     'rest_framework_swagger',
 ]
@@ -200,4 +201,12 @@ SWAGGER_SETTINGS = {
     # 'USE_SESSION_AUTH': True,
     'DOC_EXPANSION': 'list',
     'APIS_SORTER': 'alpha'
+}
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': 'http://127.0.0.1:9200/',
+        'INDEX_NAME': 'students',
+    },
 }
