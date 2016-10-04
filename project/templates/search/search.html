@@ -16,7 +16,12 @@
             <h3>Results</h3>
 
             {% for result in page.object_list %}
-                <p><a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a></p>
+                {% if result.content_type == "core.student" %}
+                    {% include "search/includes/core/student.html" %}
+                {% endif %}
+                {% if result.content_type == "core.university" %}
+                    {% include "search/includes/core/university.html" %}
+                {% endif %}
             {% empty %}
                 <p>No result found</p>
             {% endfor %}
