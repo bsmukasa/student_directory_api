@@ -26,7 +26,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url('^api/v1/docs/$', schema_view),
     url(r'^api/v1/', include(router.urls)),
-    url(r'api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^search/', include('haystack.urls'))
 ]
 
 if settings.DEBUG:
